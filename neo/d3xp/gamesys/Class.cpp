@@ -38,9 +38,6 @@ instancing of objects.
 
 #include "../Game_local.h"
 
-#include "TypeInfo.h"
-
-
 /***********************************************************************
 
   idTypeInfo
