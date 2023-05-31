@@ -813,7 +813,9 @@ void I_InitMusic(void)
 		voiceFormat.wBitsPerSample = MIDI_FORMAT_BYTES * 8;
 		voiceFormat.cbSize = 0;
 
+#if (_WIN32_WINNT < 0x0602 /*_WIN32_WINNT_WIN8*/)
 		soundSystemLocal.hardware.GetIXAudio2()->CreateSourceVoice( &pMusicSourceVoice, (WAVEFORMATEX *)&voiceFormat, XAUDIO2_VOICE_MUSIC );
+#endif
 
 		Music_initialized = true;
 	}

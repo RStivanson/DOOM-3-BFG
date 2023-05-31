@@ -29,7 +29,9 @@ If you have questions concerning this license or the applicable additional terms
 #include "../../idlib/precompiled.h"
 
 // DirectX SDK
+#if (_WIN32_WINNT < 0x0602 /*_WIN32_WINNT_WIN8*/)
 #include <DxErr.h>
+#endif
 
 #include <ks.h>
 #include <ksmedia.h>
